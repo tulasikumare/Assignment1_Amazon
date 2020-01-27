@@ -127,11 +127,14 @@ public class IphonePriceComparison extends BasePage{
 			System.out.println("Final price in flipkart: " + flipkartFinalPrice);
 
 			if (amazonFinalPrice == flipkartFinalPrice) {
+				System.out.println("Both the Application have same price");
 				WebActionUtil.logger.info("Both the Application have same price");
 			} else if (amazonFinalPrice > flipkartFinalPrice) {
+				System.out.println("amazon have  the more  price compare to flipkart");
 				WebActionUtil.logger.info("amazon have  the more  price compare to flipkart");
 			} else {
 				WebActionUtil.logger.info("flipkart have  the more  price compare to amazon");
+				System.out.println("flipkart have  the more  price compare to amazon");
 			}
 			driver.close();
 			driver.switchTo().window(tabs2.get(0));
